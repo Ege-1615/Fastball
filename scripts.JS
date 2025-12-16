@@ -44,6 +44,11 @@ let lastTackleTime2 = -CONFIG.tackleCooldown;
 
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas ? canvas.getContext('2d') : null;
+main.style.display = "none";
+gameWrapper.style.display = "block";
+document.getElementById("mainMenu").style.pointerEvents = "none";
+document.getElementById("settingsModal").style.pointerEvents = "none";
+document.getElementById("mainMenu").style.pointerEvents = "auto";
 
 const FLAGS = [
     {id:'tr', name:'Türkiye 🇹🇷', colors:['#e30a17', '#fff']},
@@ -1696,4 +1701,5 @@ window.addEventListener('keyup', e => {
 window.addEventListener('mousemove', e => {
     mouse.x = e.clientX;
     mouse.y = e.clientY;
+
 });
